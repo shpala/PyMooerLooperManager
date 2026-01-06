@@ -1,0 +1,6 @@
+# Mooer Looper Manager
+# Copy this file to /etc/udev/rules.d/ to allow non-root access
+# Then run: sudo udevadm control --reload-rules && sudo udevadm trigger
+
+# MODE="0666" allows all users to access the device (Arch Linux doesn't have plugdev group)
+SUBSYSTEM=="usb", ATTR{idVendor}=="34db", ATTR{idProduct}=="0008", MODE="0666"

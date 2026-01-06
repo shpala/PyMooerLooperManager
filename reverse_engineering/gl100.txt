@@ -1,0 +1,13 @@
+1-18		Sniffer Start
+19-54		Device On
+55-~386		GUI Connect
+~386-838	After connection
+875-489658	upload track 0
+489659-712938	upload track 1
+712939-712974	selected download track 1
+712975-824610	downloaded track 1
+824611-826814	play/pause track 1
+826815-826822	delete track 1
+826823-826830	delete track 0
+826831-827234	factory reset
+827235-827238	disconnect

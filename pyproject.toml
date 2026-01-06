@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyMooerLooperManager"
+version = "0.1.0"
+description = "Mooer Looper Manager - Open Source Manager for Mooer Loopers"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Pavel Ferencz", email = "shpala@gmail.com"}
+]
+dependencies = [
+    "pyusb>=1.2.1",
+    "PyQt6>=6.4.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "PyAudio>=0.2.13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+PyMooerLooperManager = "gl100.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
